@@ -1,0 +1,43 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+</head>
+
+<body>
+    <script id="post-template" type="text/x-handlebars-template">
+        <div class="post" id = "{{post.id}}">
+          <a href="#" class="remove">remove</a> 
+          <a href="#" class="show-comments">comments</a> 
+          {{ post.text }}
+
+          <div class="comments-container">
+            <div class="comments-list">
+                <input type="text" class="comment-name"/>
+                <button class="btn btn-primary add-comment">Post Comment</button> 
+            </div>
+          </div>
+        </div>
+    </script>
+    <header>
+        <h3> Tweeter</h3>
+    </header>
+
+    <div id="container">
+        
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.js" crossorigin="anonymous"></script>
+    <script src="tweeter.js"></script>
+    <script src="renderer.js"></script>
+    <script src="main.js"></script>
+
+</body>
+
+</html>

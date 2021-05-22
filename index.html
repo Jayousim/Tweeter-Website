@@ -11,16 +11,20 @@
 </head>
 
 <body>
+    <script id="comment-template" type="text/x-handlebars-template">
+        {{#each comments}}
+            <p>{{text}}</p>
+        {{/each}}
+    </script>
     <script id="post-template" type="text/x-handlebars-template">
         <div class="post" id = "{{post.id}}">
-          <a href="#" class="remove">remove</a> 
+          <a href="#" class="remove" >remove</a> 
           <a href="#" class="show-comments">comments</a> 
           {{ post.text }}
-
           <div class="comments-container">
+            <input type="text" class="comment-name"/>
+            <button class="btn btn-primary add-comment">Post Comment</button>
             <div class="comments-list">
-                <input type="text" class="comment-name"/>
-                <button class="btn btn-primary add-comment">Post Comment</button> 
             </div>
           </div>
         </div>
@@ -28,7 +32,8 @@
     <header>
         <h3> Tweeter</h3>
     </header>
-
+    <input type="text" placeholder="Write your thoughts here..." class="post-text" id="post-box" > </input>
+    <button id="twit_button"> Twit</button>
     <div id="container">
         
     </div>

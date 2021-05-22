@@ -28,11 +28,13 @@ const Tweeter = function(){
     var idCount = 2
     var commentIdCount = 6
     const addPost = function(post){
-        tweets.push( { text: post,
-                       id: "p" + idCount.toString(10),
-                       comments: []       
-                    })
+        let postObj = { text: post,
+            id: "p" + idCount.toString(10),
+            comments: []       
+         }
+        tweets.push(postObj)
         idCount += 1
+        return postObj
     }
     const removePost = function(postId){
         for(i in tweets){
@@ -68,13 +70,20 @@ const Tweeter = function(){
     const getPosts = function(){
         return tweets
     }
-
+    const getComments = function(postId){
+        for(i in tweets){
+            if(tweets[i].id === postId){
+                return tweets[i].comments
+            }
+        }
+    }
     return {
         addPost: addPost,
         removePost: removePost,
         addComment: addComment,
         removeComment: removeComment,
-        getPosts: getPosts
+        getPosts: getPosts,
+        getComments: getComments
     }
 }
 

@@ -13,6 +13,20 @@ body{
     "h .""i b""p p"
 }
 
+#post-box{
+    width: 75%;
+    height: 50px;
+    box-sizing: border-box
+}
+
+#twit_button{
+
+    background-color:#3498db ;
+    height: 50px;
+    width: 25%;
+    float: right;
+    box-sizing: border-box
+}
 #header{
     grid-area: h;
     color: #3498db;
